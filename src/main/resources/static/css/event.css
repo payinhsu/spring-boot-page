@@ -1,0 +1,108 @@
+.html, .body {
+	margin: 0;
+	padding:0;
+}
+.video {
+	width: 100%;
+	z-index: 1;
+}
+
+.Btn {
+	position: absolute;
+	width: 50%;
+	margin: 42.5% 0 0 38%;
+	display: -webkit-box;
+	height: 7%;
+	z-index: 22;
+}
+
+#BtnList{
+	background: url(../imgs/clown/bt_1_n.png) no-repeat;
+	width: 132px;
+	height: 160px;
+}
+
+#BtnList:hover {
+	background: url(../imgs/clown/bt_1_s.png)no-repeat;
+}
+
+#BtnPlay{
+	background: url(../imgs/clown/bt_2_n.png) no-repeat;
+	width: 132px;
+	height: 160px;
+	margin: 2% 1.2%;
+}
+
+#BtnPlay:hover {
+	background: url(../imgs/clown/bt_2_s.png)no-repeat;
+}
+#BtnDestail{
+	background: url(../imgs/clown/bt_3_n.png) no-repeat;
+	width: 132px;
+	height: 160px;
+}
+
+#BtnDestail:hover {
+	background: url(../imgs/clown/bt_3_s.png)no-repeat;
+}
+
+/*screen size*/
+@media screen and (max-width: 800px) {
+	#BtnList, #BtnPlay, #BtnDestail, #BtnDestail:hover, #BtnPlay:hover,#BtnList:hover {
+		background-size: 100%;
+		width: 60px;
+	}
+}
+@media screen and (min-width: 801px) and (max-width: 980px) {
+	.Btn{
+		margin: 42.5% 0 0 40%;
+	}
+	#BtnList, #BtnPlay, #BtnDestail, #BtnDestail:hover, #BtnPlay:hover,#BtnList:hover {
+		background-size: 100%;
+		width: 58px;
+	}
+}
+@media screen and(min-width: 981px) and (max-width: 1023px) {
+	#BtnList, #BtnPlay, #BtnDestail, #BtnDestail:hover, #BtnPlay:hover,#BtnList:hover {
+		background-size: 100%;
+		width: 95px;
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+	.Btn{
+		margin: 42.5% 0 0 33%;
+	}
+	#BtnList, #BtnPlay, #BtnDestail, #BtnDestail:hover, #BtnPlay:hover,#BtnList:hover {
+		background-size: 100%;
+		width: 95px;
+	}
+}
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+
+	#BtnList, #BtnPlay, #BtnDestail, #BtnDestail:hover, #BtnPlay:hover,#BtnList:hover {
+		background-size: 100%;
+		width: 95px;
+	}
+}
+@media screen and (min-width: 1920px)and (max-width: 2100px) {
+	.Btn{
+		margin: 42.5% 0 0 41.5%;
+	}
+	#BtnList, #BtnPlay, #BtnDestail, #BtnDestail:hover, #BtnPlay:hover,#BtnList:hover {
+		background-size: 100%;
+		width: 95px;
+	}
+}
+@media screen and (min-width: 2100px) {
+	.Btn{
+		margin: 42.5% 0 0 40%;
+	}
+}
+
+/*mobile*/
+@media screen and (max-width: 800px) {
+	#BtnList, #BtnPlay, #BtnDestail, #BtnDestail:hover, #BtnPlay:hover,#BtnList:hover {
+		background-size: 100%;
+		width: 60px;
+	}
+}

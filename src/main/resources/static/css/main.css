@@ -1,0 +1,132 @@
+html {
+    background-image: url(../imgs/bg.png);
+    min-height: 100%;
+}
+
+body {
+    border-collapse:collapse;
+    min-height: 100%;
+}
+
+.container {
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-align: center;
+    line-height: normal;
+    position: relative;
+    display: block;
+}
+
+.container p {
+    border-width: 0px;
+    position: relative;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0 auto;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1;
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+    font-kerning: normal;
+}
+
+.label {
+    border-width: 0px;
+    position: relative;
+    width: 90%;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding-top: 20px;
+    text-align: left;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.title1 {
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    text-align: center;
+    line-height: normal;
+}
+
+.title2 {
+    position: relative;
+    width: 90%;
+    padding-top: 20px;
+    text-align: left;
+    font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    color: #FFFFFF;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    border: 1px solid rgba(121, 121, 121, 1);
+    background: #2d2d2d;
+    overflow: auto;
+}
+
+.table {
+    display: table;
+    border-collapse:collapse;
+    width: 90%;
+    position: relative;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.css_tr {
+    display: table-row;
+    border: 1px solid rgba(121, 121, 121, 1);
+}
+.css_td {
+    display: table-cell;
+    border: 1px solid rgba(121, 121, 121, 1);
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.cell {
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    line-height: normal;
+    color: #FFFFFF;
+    background: #2d2d2d;
+}
+
+.titleCell {
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    line-height: normal;
+    color: #FFFFFF;
+    word-wrap: break-word;
+    background: #a80a0d;
+}

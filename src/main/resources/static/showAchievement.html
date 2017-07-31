@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11, width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <title>PlanGo Achievement list</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="http://twdev-static.yolo168.xyz/activities/fafa/png/css/main.css" rel="stylesheet" type="text/css"/>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://twdev-static.yolo168.xyz/activities/fafa/png/js/lib/jquery.min.js"></script>
+    <script src="http://twdev-static.yolo168.xyz/activities/fafa/png/js/lib/core-min.js"></script>
+    <script type="text/javascript" src="http://twdev-static.yolo168.xyz/activities/fafa/png/js/lib/enc-base64-min.js"></script>
+    <script type="text/javascript" src="http://twdev-static.yolo168.xyz/activities/fafa/png/js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.loadingoverlay/latest/loadingoverlay.min.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class="container">
+        <div class="title1" data-width="836" data-height="232">玩火小丑锦标赛</div>
+        <div class="label">
+            体验PNG老虎机游戏并挣取分数，将有机会获得最高2,888元的现金大奖！仅限9天，机不可失，马上参加！
+        </div>
+        <div class="label" id="activityTime"></div>
+        <div class="title2">
+            目前积分排行榜：
+        </div>
+        <div class="label">
+            <p id="showRank"></p>
+        </div>
+    </div>
+    <br>
+    <div class="table">
+        <div class="css_tr">
+            <div class="css_td titleCell" style="width: 10%">排名</div>
+            <div class="css_td titleCell" style="width: 20%">用户名</div>
+            <div class="css_td titleCell" style="width: 30%">积分</div>
+            <div class="css_td titleCell" style="width: 40%">奖金</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="label">
+            <span><a id="rules">规则与条款：</a></span>
+        </div>
+        <br>
+    </div>
+
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        var loginAccount = getQueryVariable("account");
+        var params = {};
+
+        var rtn = {
+            rank: Math.floor((Math.random() * 20) + 2000), /*random 2000~2020*/
+            point: 0
+        };
+        generateRulesAndActivityTime();
+        getAchievementTable(rtn,params,loginAccount,function(returnObj){
+            rtn = returnObj;
+            if(loginAccount){
+                var point = '';
+                var rank = '';
+                if(rtn.point === 0){
+                    point = '---';
+                    rank = '---';
+                }else{
+                    point = rtn.point;
+                    rank = rtn.rank;
+                }
+                getUserName(loginAccount,rank,point);
+            }
+        });
+    });
+    $(document).ajaxStart(function(){
+        $.LoadingOverlay("show");
+    });
+    $(document).ajaxStop(function(){
+        setTimeout(function () {
+            $.LoadingOverlay("hide");
+        }, 100);
+        if(getQueryVariable("rules")){
+            window.location.hash = '#rules';
+        }
+    });
+</script>
+</html>
